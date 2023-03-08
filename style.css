@@ -1,8 +1,21 @@
+:root {
+    --AZUL-DNC: #0C70F2;
+    --PRETO-DNC: #303030;
+    --CINZA-HOVER: #C9C9C9;
+    --FONT-PADRÃO: 'Inter', sans-serif;
+}
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 body {
     margin: 0px;
     padding: 0px;
     background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
     background-repeat: no-repeat;
+    font-family: var(--FONT-PADRÃO);
 }
 
 #menu {
@@ -15,22 +28,23 @@ body {
 #principal {
     width: 100%;
     height: 100px;
-    background-color: #303030;
+    background-color: var(--PRETO-DNC);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #BABABA;
+    font-family: var(--FONT-PADRÃO);
 }
 
     #principal div a {
-        font-family: 'Inter';
+        font-family: 'Inter', sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
         line-height: 30px;
         color: #FFFFFF;
         text-decoration: none;
-        font-family: 'Inter', sans-serif;
+        font-family: var(--FONT-PADRÃO);
     }
 
     #principal div a:hover {
@@ -39,7 +53,7 @@ body {
 
     #principal button {
         margin-right: 5%;
-        background: #0C70F2;
+        background: var(--AZUL-DNC);
         width: 80px;
         height: 39px;
         font-family: 'Inter', sans-serif;
@@ -47,5 +61,100 @@ body {
         border: none;
         font-weight: 600;
         box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
+        cursor: pointer;
+    }
+
+    /* Seção principal do site */
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 100px;
+        margin-bottom: 100px; 
+    }
+
+        header {
+            color: white;
+            font-family: var(--FONT-PADRÃO)
+        }
+
+        header h1 {
+            text-transform: uppercase;
+            font-size: 60px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        header h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }   
+
+        h2 .invert {
+            background-color: black;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+    /* Formulário */
+
+    form {
+        color: white;
+        font-family: var(--FONT-PADRÃO);
+        font-weight: 600;
+        font-size: 30px;
+        width: 600px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    form input {
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        height: 30px;
+        border: none;
+        font-size: 20px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.9);;
+    }
+
+    form label {
+        margin: 10px 0px 10px 0px;
+    }
+
+    form input::placeholder{
+        color: rgba(57, 57, 57, 0.5);
+    }
+
+    .checkboxItens label {
+        font-size: 25px;
+    }
+
+    .checkboxItens {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.7);
+    }
+
+    input[type="submit"] {
+        background: rgba(12, 112, 242, 0.9);
+        width: 100%;
+        height: 50px;
+        margin-top: 50px;
+        color: white;
+        box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
         cursor: pointer;
     }
